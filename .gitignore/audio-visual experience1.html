@@ -1,0 +1,67 @@
+<!DOCTYPE HTML>
+<html>
+<head>
+<title>Audio-visual experience</title>
+</head>
+<body bgcolor="#FFFFFF" text="#000000">
+
+<form method="post" name="myemailform" action="form-to-email.php">
+
+<table>
+<tr>
+<td>name:</td> 
+<td><input type="text" name="UserName" size=35 maxlength=50 value=""></td>
+</tr>
+<tr>
+<td>age:</td> 
+<td><input type="text" name=“age” size=35 maxlength=50 value=""></td>
+</tr>
+<tr>
+<td>gender:</td> 
+<td><input type="text" name=“gender” size=35 maxlength=50 value=""></td>
+</tr>
+<tr>
+<td>location:</td> 
+<td><input type="text" name=“location” size=35 maxlength=50 value=""></td>
+</tr>
+<td>nationality:</td> 
+<td><input type="text" name=“nationality” size=35 maxlength=50 value=""></td>
+</tr>
+<tr>
+<td>culture you associate yourself with:</td> 
+<td><input type="text" name=“culture” size=35 maxlength=50 value=""></td> 
+</tr>   
+</table>
+
+
+
+<BR>
+<input type=submit value=SUBMIT>
+<BR>
+
+
+<?php
+  $name = $_POST['name'];
+  $age = $_POST[‘age’];
+  $gender = $_POST[‘gender’];
+  $location = $_POST[‘location’];
+  $nationality = $_POST[‘nationality’];
+  $culture = $_POST[‘culture’];
+?>
+
+<?php
+$email_from = 'yourname@yourwebsite.com';
+$email_subject = "New Form submission";
+$email_body = "You have received a new message from the user $name.\n".
+"Here is the information:\n $name”.
+"Here is the information:\n $age”.
+"Here is the information:\n $gender”.
+"Here is the information:\n $location”.
+"Here is the information:\n $nationality”.
+"Here is the information:\n $culture”.
+?>
+
+   
+</form>
+</body>
+</html>
